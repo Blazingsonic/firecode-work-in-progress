@@ -12,7 +12,8 @@ var gulp = require('gulp'),
 	svgmin = require('gulp-svgmin'),
 	useref = require('gulp-useref'),
 	iff = require('gulp-if'),
-	minifyCss = require('gulp-minify-css');
+	minifyCss = require('gulp-minify-css'),
+	pages = require('gulp-gh-pages');
 
 var options = {
 	src: 'src',
@@ -67,6 +68,11 @@ gulp.task('html', ['compileSass'], function() {
 gulp.task('build', ['html'], function() {
 	return gulp.src([options.src + '/img/**', options.src + '/fonts/**'], {base: options.src})
 		.pipe(gulp.dest('dist'));
+});
+
+gulp.task('deploy', function() {
+	return gulp.src(options.dist + '**/*')
+		.pipe(pages());
 });
 
 gulp.task('serve', ['watchFiles']);
