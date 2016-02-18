@@ -71,7 +71,7 @@ gulp.task('build', ['html'], function() {
 });
 
 gulp.task('deploy', function() {
-	return gulp.src(options.dist + '**/*')
+	return gulp.src(options.dist + '/**/*')
 		.pipe(pages());
 });
 
