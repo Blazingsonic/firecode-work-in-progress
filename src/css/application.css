@@ -207,6 +207,13 @@ ol {
 li {
   margin-bottom: 10px; }
 
+.logo {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 /* Pseudo-classes ------------------ */
 a:link {
   color: #ffa949;
