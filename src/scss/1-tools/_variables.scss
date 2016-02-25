@@ -6,11 +6,15 @@ $grey           : #878787;
 $regent-st-blue : #add8e6;
 $river-bed      : #48525c;
 $yellow-orange  : #ffa949;
+$sky-red		: #b16369;
+$dark-grey		: #312933;
+$smoke-grey		: #594c5f;
 
 // Functional color variables
 
-$color-prim         : $yellow-orange;
-$color-sec          : $river-bed;
+$color-prim         : $dark-grey;
+$color-sec          : $sky-red;
+$color-ter          : $smoke-grey;
 
 $color-text-light   : $white;
 $color-text-base    : $grey;
@@ -28,8 +32,10 @@ $color-body         : $white;
 // Font stacks
 
 $stack-sans-serif : Helvetica, Arial, sans-serif;
+$stack-serif : serif;
 $stack-helvetica  : 'Helvetica Neue', $stack-sans-serif;
 $stack-abolition  : 'Abolition Regular', $stack-sans-serif;
+$stack-montserrat  : 'Montserrat', $stack-sans-serif;
 
 // Border radius
 

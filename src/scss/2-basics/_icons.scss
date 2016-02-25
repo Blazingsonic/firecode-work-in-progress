@@ -1,8 +1,8 @@
 // Arrow image icon
 
 .arrow {
-	width: 50px;
-	margin-top: 150px;
+	width: 5rem;
+	margin-top: 15rem;
 
 	@media #{$brk-narrow} {
 		display: none;
@@ -15,6 +15,16 @@
 	width: 0;
 	height: 0;
 	position: absolute;
+}
+
+.main-logo {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fcfcfe;
+    font-size: 3rem;
+    font-family: $stack-montserrat;
 }
 
 // ==========================================================================
@@ -33,11 +43,11 @@
 // Smoke
 
 #smoke-outer {
-	fill: #312933;
+	fill: $color-prim;
 }
 
 #smoke-inner {
-	fill: #594c5f;
+	fill: $color-ter;
 }
 
 // Clouds
@@ -49,7 +59,7 @@
 
 #red-cloud-right,
 #red-cloud-left {
-	fill: #b16369;
+	fill: $color-sec;
 }
 
 // Rocket
@@ -74,7 +84,7 @@
 
 #mountains-left,
 #mountains-right {
-	fill: #312934;
+	fill: $color-prim;
 }
 
 #mountain-top-left,
