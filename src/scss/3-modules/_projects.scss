@@ -1,0 +1,10 @@
+.projects {
+
+	.project {
+		@include work-card();
+
+		.project-bottom {
+			padding: 1rem;
+		}
+	}
+}

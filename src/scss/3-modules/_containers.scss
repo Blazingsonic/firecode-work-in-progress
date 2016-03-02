@@ -1,32 +1,26 @@
-.primary-content {
-  @extend %content;
-  @extend %centered;
-  @extend %t-border;
-	padding-top: 25px;
-  padding-bottom: 95px;
+main {
+	padding: 0 2rem;
+
+	@include media('>extra-small', '<=small') {
+	    padding: 0 3rem;
+	}
+	@include media('>small', '<=medium') {
+		padding: 0 4rem;
+	}
 }
 
-.secondary-content {
-  @extend %content;
-  @extend %t-border;
-  @extend %clearfix;
-  padding-top: 80px;
-	padding-bottom: 70px;
-  border-bottom: 2px solid $color-border-light;
+section.work {
+	padding: 4rem 0;
 }
 
-.wildlife {
-  color: $color-text-light;
-  text-align: left;
-  padding: 18% 24%;
-  border-top: 10px solid $color-border-dark;
-  margin: 105px 0 60px;
-  background: $color-sec url('#{$path-img}/bear.jpg') no-repeat center;
-  background-size: cover;
-  box-shadow: inset 0 0 50px 10px $color-shadow;
-  border-radius: $br;
-  @media #{$brk-wide} {
-    padding: 10% 12%;
-    margin: 50px 0 20px;
-  }
+.sub-header {
+	display: block;
+	margin: 0 auto 1rem auto;
+
+	a:nth-of-type(1) {
+		
+		button {
+			margin-right: 1.5rem;
+		}
+	}
 }

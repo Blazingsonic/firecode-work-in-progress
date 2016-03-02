@@ -1,9 +1,22 @@
+button {
+	@include text(1.1rem, 1.1, normal, $white);
+	border: 0.175em solid $white;
+	padding: 0.6em 1.2em;
+	background: transparent;
+	margin: 1rem 0;
+
+	&:hover {
+		color: $color-sec;
+		border-color: $color-sec;
+	}
+}
+
 // Callout link/button
 
 .callout {
-  font-size: 1.25rem;
-  border-bottom: 0.1em solid;
-  padding: 0 0.5em 0.3em;
-  margin-top: 2rem;
-  display: inline-block;
+	font-size: 1.25rem;
+	border-bottom: 0.1em solid;
+	padding: 0 0.5em 0.3em;
+	margin-top: 2rem;
+	display: inline-block;
 }

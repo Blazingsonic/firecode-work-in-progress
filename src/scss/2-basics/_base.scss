@@ -1,70 +1,91 @@
 /* Base Styles -------------------- */
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	@include text(100%, 1.5, $color: $color-text-base);
 }
 
 body {
-    @include text(16px, 1.5, $color: $color-text-base);
-    margin: 0;
-    font-family: $stack-montserrat;
-    background: #312933;
+	margin: 0;
+	font-family: $stack-montserrat;
+	background: #312933;
 }
 
 img {
-    max-width: 100%;
-    margin-bottom: 2rem;
-    border-radius: $br;
+	max-width: 100%;
+	//margin-bottom: 2rem;
+	//border-radius: $br;
 }
 
 ul,
 ol {
-    margin: 3rem 0;
+	margin: 3rem 0;
 }
 
 li {
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 /* Navigation ------------------ */
 
 .main-nav {
-    background-color: $color-prim;
-    border-top: .1em solid $color-sec;
-    border-bottom: .5em solid rgba(0,0,0,0.15);
+	background-color: $color-prim;
+	border-top: .1rem solid $color-sec;
+	border-bottom: .5rem solid rgba(0,0,0,0.15);
 
-    ul.grid {
-        margin: 0;
-        padding: 0.5rem 0;
-        color: $white;
+	ul.grid {
+	    margin: 0;
+	    padding: 0.5rem 0;
+	    color: $white;
 
-        li {
-            margin-bottom: 0;
-            text-align: center;
-        }
+	    li {
+	        margin-bottom: 0;
+	        text-align: center;
+	    }
 
-        li:first-child {
-            color: $color-ter;
-            font-weight: bold;
-        }
+	    li:first-child {
+	        color: $color-ter;
+	        font-weight: bold;
+	    }
 
-        li.active {
-            color: $color-sec;
-        }
-    }
+	    li.active {
+	        color: $color-sec;
+	    }
+	}
 }
 
 /* Pseudo-classes ------------------ */
 
 a {
-    &:link {
-        color: $color-link-default;
-        text-decoration: none;
-    }
-    &:visited {
-        color: $color-link-visited;
-    }
-    &:hover {
-        color: rgba($color-link-default, .5);
-    }
+	&:link {
+	    color: $color-link-default;
+	    text-decoration: none;
+	}
+	&:visited {
+	    color: $color-link-visited;
+	}
+	&:hover {
+	    color: rgba($color-link-default, .5);
+	}
 }
+
+/* Transitions ------------------ */
+
+// General
+
+button {
+	transition: 0.15s ease-out;
+}
+
+
+
+
+
+
+
+
+
+

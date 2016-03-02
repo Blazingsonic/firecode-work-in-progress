@@ -4,9 +4,6 @@
 	width: 5rem;
 	margin-top: 15rem;
 
-	@media #{$brk-narrow} {
-		display: none;
-	}
 }
 
 // General
@@ -110,6 +107,18 @@
 	fill: #a79aa8;
 }
 
+/* Sub Icons -------------------- */
+
+.sub-icon {
+	width: 5rem;
+	height: 5rem;
+}
+
+// Telescope
+
+#telescope-circle {
+	fill: $white;
+}
 
 
 

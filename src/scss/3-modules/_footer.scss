@@ -1,9 +1,6 @@
 .main-footer {
-  @extend %centered;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  border-bottom: 1em solid $color-border-dark;
-  @media #{$brk-narrow} {
-  	padding: 2rem 0;
-  }
+	@extend %centered;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+	border-bottom: 1em solid $color-border-dark;
 }

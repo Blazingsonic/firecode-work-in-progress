@@ -266,7 +266,7 @@ th {
   position: relative;
   width: 100%;
   vertical-align: top;
-  padding: 0.5rem; }
+  padding: 0.75em; }
 
 .grid__cell {
   display: block;
@@ -936,18 +936,18 @@ _:-ms-fullscreen,
 * {
   box-sizing: border-box; }
 
-body {
-  font-size: 16px;
+html {
+  font-size: 100%;
   line-height: 1.5;
-  color: #878787;
+  color: #878787; }
+
+body {
   margin: 0;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
   background: #312933; }
 
 img {
-  max-width: 100%;
-  margin-bottom: 2rem;
-  border-radius: 10px; }
+  max-width: 100%; }
 
 ul,
 ol {
@@ -959,8 +959,8 @@ li {
 /* Navigation ------------------ */
 .main-nav {
   background-color: #312933;
-  border-top: 0.1em solid #b16369;
-  border-bottom: 0.5em solid rgba(0, 0, 0, 0.15); }
+  border-top: 0.1rem solid #b16369;
+  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.15); }
   .main-nav ul.grid {
     margin: 0;
     padding: 0.5rem 0;
@@ -985,6 +985,11 @@ a:visited {
 a:hover {
   color: rgba(255, 169, 73, 0.5); }
 
+/* Transitions ------------------ */
+button {
+  -webkit-transition: 0.15s ease-out;
+  transition: 0.15s ease-out; }
+
 /* Web Fonts -------------------- */
 @font-face {
   font-family: "Montserrat";
@@ -992,20 +997,44 @@ a:hover {
   src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype"); }
 
 h1,
+h2,
+h3 {
+  letter-spacing: initial; }
+
+h1,
 h2 {
   font-family: "Abolition Regular", Helvetica, Arial, sans-serif; }
 
 h2 {
-  font-size: 3.3125rem;
+  font-size: 1.7rem;
   line-height: 1.1;
   font-weight: normal;
-  margin: 0 0 .5rem; }
+  color: #fff;
+  margin: 0.5rem 0 .5rem; }
 
 h3 {
   font-size: 1.25rem;
   line-height: 1.2;
-  color: #48525c;
+  color: #312933;
   margin-bottom: 1.7rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #594c5f; }
+
+button {
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: normal;
+  color: #fff;
+  border: 0.175em solid #fff;
+  padding: 0.6em 1.2em;
+  background: transparent;
+  margin: 1rem 0; }
+  button:hover {
+    color: #b16369;
+    border-color: #b16369; }
 
 .callout {
   font-size: 1.25rem;
@@ -1017,9 +1046,6 @@ h3 {
 .arrow {
   width: 5rem;
   margin-top: 15rem; }
-  @media (max-width: 768px) {
-    .arrow {
-      display: none; } }
 
 .hide-svg-defs {
   width: 0;
@@ -1079,6 +1105,14 @@ h3 {
 #star1, #star2, #star3, #star4, #star5, #star6, #star7, #star8 {
   fill: #a79aa8; }
 
+/* Sub Icons -------------------- */
+.sub-icon {
+  width: 5rem;
+  height: 5rem; }
+
+#telescope-circle {
+  fill: #fff; }
+
 .header {
   background: #82737f;
   background: -webkit-linear-gradient(#82737f 0%, #a66976 100%);
@@ -1091,33 +1125,26 @@ h3 {
   padding-top: 6rem;
   padding-bottom: 6rem;
   border-bottom: 1em solid #ffa949; }
-  @media (max-width: 768px) {
-    .main-footer {
-      padding: 2rem 0; } }
 
-.primary-content {
-  padding-top: 25px;
-  padding-bottom: 95px; }
+main {
+  padding: 0 2rem; }
 
-.secondary-content {
-  padding-top: 80px;
-  padding-bottom: 70px;
-  border-bottom: 2px solid #e0e0e0; }
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    padding: 0 3rem; } }
 
-.wildlife {
-  color: #fff;
-  text-align: left;
-  padding: 18% 24%;
-  border-top: 10px solid #ffa949;
-  margin: 105px 0 60px;
-  background: #b16369 url("../img/bear.jpg") no-repeat center;
-  background-size: cover;
-  box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 0.8);
-  border-radius: 10px; }
-  @media (max-width: 1024px) {
-    .wildlife {
-      padding: 10% 12%;
-      margin: 50px 0 20px; } }
+@media (min-width: 769px) and (max-width: 992px) {
+  main {
+    padding: 0 4rem; } }
+
+section.work {
+  padding: 4rem 0; }
+
+.sub-header {
+  display: block;
+  margin: 0 auto 1rem auto; }
+  .sub-header a:nth-of-type(1) button {
+    margin-right: 1.5rem; }
 
 .tips {
   float: left; }
@@ -1125,35 +1152,20 @@ h3 {
 .resorts {
   float: right; }
 
-.main-footer, .primary-content {
+.main-footer {
   text-align: center; }
-
-.primary-content, .secondary-content {
-  border-top: 2px solid #e0e0e0; }
-
-.primary-content, .secondary-content {
-  width: 75%;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin: auto;
-  max-width: 960px; }
-  @media (max-width: 1024px) {
-    .primary-content, .secondary-content {
-      width: 90%; } }
-  @media (max-width: 768px) {
-    .primary-content, .secondary-content {
-      width: 100%;
-      padding: 20px;
-      border-top: none; } }
 
 .tips, .resorts {
   width: 46.5%; }
-  @media (max-width: 768px) {
-    .tips, .resorts {
-      float: none;
-      width: 100%; } }
 
-.secondary-content:after {
-  content: "";
-  display: table;
-  clear: both; }
+.projects .project {
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: normal;
+  color: #fff;
+  border-top: 0.175em solid #fff;
+  border-left: 0.175em solid #fff;
+  border-right: 0.175em solid #fff;
+  background: #fff; }
+  .projects .project .project-bottom {
+    padding: 1rem; }
