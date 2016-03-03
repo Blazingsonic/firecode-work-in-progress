@@ -2,6 +2,15 @@
 
 html {
 	@include text(100%, 1.5, $color: $color-text-base);
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  	-webkit-box-sizing: inherit;
+  	-moz-box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
@@ -22,7 +31,7 @@ ol {
 }
 
 li {
-	//margin-bottom: 2rem;
+	margin-bottom: 2rem;
 	list-style-type: none;
 }
 
@@ -30,16 +39,16 @@ li {
 
 .main-nav {
 	background-color: $color-prim;
-	border-top: .1rem solid $color-border-dark;
-	border-bottom: .5rem solid rgba(0,0,0,0.15);
+	border-top: .25rem solid $color-sec;
+	border-bottom: .5rem solid darken($color-border-dark, 5%);
 
-	ul.grid {
+	ul.row {
 	    margin: 0;
 	    padding: 0.5rem 0;
 
 	    li {
 	        margin-bottom: 0;
-	        text-align: center;
+	        padding: 0.4rem 0;
 	    }
 
 	    li:first-child a {

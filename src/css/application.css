@@ -983,7 +983,11 @@ th {
 html {
   font-size: 100%;
   line-height: 1.5;
-  color: #b5b5b5; }
+  color: #b5b5b5;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
 
 body {
   margin: 0;
@@ -998,20 +1002,21 @@ ol {
   margin: 1rem 0; }
 
 li {
+  margin-bottom: 2rem;
   list-style-type: none; }
 
 /* Navigation ------------------ */
 .main-nav {
   background-color: #312933;
-  border-top: 0.1rem solid #b16369;
-  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.15); }
-  .main-nav ul.grid {
+  border-top: 0.25rem solid #b16369;
+  border-bottom: 0.5rem solid #231e25; }
+  .main-nav ul.row {
     margin: 0;
     padding: 0.5rem 0; }
-    .main-nav ul.grid li {
+    .main-nav ul.row li {
       margin-bottom: 0;
-      text-align: center; }
-    .main-nav ul.grid li:first-child a {
+      padding: 0.4rem 0; }
+    .main-nav ul.row li:first-child a {
       color: #b5b5b5;
       font-weight: bold; }
 
@@ -1096,6 +1101,21 @@ button {
   font-family: "Montserrat", Helvetica, Arial, sans-serif; }
 
 /* Hero -------------------- */
+.hero-container {
+  height: 0;
+  /* collapse the container's height */
+  width: 100%;
+  /* specify any width you want (a percentage value, basically) */
+  /* apply a padding using the following formula */
+  /* this formula makes sure the aspect ratio of the container equals that of the svg graphic */
+  padding-top: 58.7%;
+  position: relative;
+  /* create positioning context for svg */ }
+  .hero-container .hero {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
 #smoke-outer {
   fill: #312933; }
 
@@ -1109,6 +1129,9 @@ button {
 #red-cloud-right,
 #red-cloud-left {
   fill: #b16369; }
+
+#rocket-body {
+  fill: #3e3543; }
 
 #inner-flame {
   fill: #ffe3f4; }
@@ -1160,7 +1183,7 @@ button {
 .main-footer {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  border-bottom: 1em solid #b16369; }
+  border-bottom: 1em solid #312933; }
 
 main {
   max-width: 80rem;
