@@ -6,17 +6,7 @@ main {
 section.work,
 section.testimonials {
 	position: relative;
-	padding: 4rem 1.5rem;
-
-	@include media('>extra-small', '<=small') {
-	    padding: 4rem 3rem;
-	}
-	@include media('>small', '<=medium') {
-		padding: 4rem 4.5rem;
-	}
-	@include media('>medium') {
-		padding: 4rem 6rem;
-	}
+	padding: 4rem 0;
 
 	&:after {
 		content: '';
@@ -29,9 +19,7 @@ section.testimonials {
 	}
 }
 
-.testimonials {
-	background: $darkest-grey;
-}
+// Work
 
 .sub-header {
 	display: block;
@@ -42,5 +30,27 @@ section.testimonials {
 		button {
 			margin-right: 1.5rem;
 		}
+	}
+}
+
+.projects {
+	padding: 0 2rem;
+
+	@include media('>small', '<=medium') {
+		padding: 0 2rem;
+	}
+	@include media('>medium') {
+		padding: 0 4rem;
+	}
+}
+
+// Testimonials
+
+.testimonials {
+	background: $darkest-grey;
+
+	.row {
+		max-width: 35rem;
+		margin: 0 auto;
 	}
 }

@@ -1,39 +1,41 @@
-.projects {
+.project {
+	@include work-card();
+	cursor: pointer;
+	position: relative;
+	margin-bottom: 1rem;
 
-	.project {
-		@include work-card();
-		cursor: pointer;
+	img {
+		border: 0.175em solid $white;
+	}
 
-		.project-bottom {
-			padding: 1rem;
-			position: relative;
+	.project-bottom {
+		padding: 1rem;
 
-			p {
-				color: $color-text-base;
-			}
+		p {
+			color: $color-text-base;
+		}
+	}
+
+	&:hover {
+
+		img {
+			opacity: 0.95;
 		}
 
-		&:hover {
+		&:after {
+			content: '';
+		    position: absolute;
+		    left: 0;
+		    bottom: 0;
+		    width: 100%;
+		    background: $color-sec;
+		    height: 2%;
+		}
 
-			img {
-				opacity: 0.95;
-			}
+		.project-bottom {
 
-			.project-bottom {
-				
-				&:after {
-					content: '';
-				    position: absolute;
-				    bottom: 0;
-				    width: 102%;
-				    background: $color-sec;
-				    height: 3%;
-				    right: -1%;
-				}
-
-				h3 {
-					color: $color-sec;
-				}
+			h3 {
+				color: $color-sec;
 			}
 		}
 	}

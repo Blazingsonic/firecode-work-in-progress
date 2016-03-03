@@ -44,9 +44,6 @@
 // Work Card
 @mixin work-card {
 	@include text(1.1rem, 1.1, normal, $white);
-	border-top: 0.175em solid $white;
-	border-left: 0.175em solid $white;
-	border-right: 0.175em solid $white;
 	background: $white;
 }
 
