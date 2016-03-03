@@ -2,9 +2,39 @@
 
 	.project {
 		@include work-card();
+		cursor: pointer;
 
 		.project-bottom {
 			padding: 1rem;
+			position: relative;
+
+			p {
+				color: $color-text-base;
+			}
+		}
+
+		&:hover {
+
+			img {
+				opacity: 0.95;
+			}
+
+			.project-bottom {
+				
+				&:after {
+					content: '';
+				    position: absolute;
+				    bottom: 0;
+				    width: 102%;
+				    background: $color-sec;
+				    height: 3%;
+				    right: -1%;
+				}
+
+				h3 {
+					color: $color-sec;
+				}
+			}
 		}
 	}
 }

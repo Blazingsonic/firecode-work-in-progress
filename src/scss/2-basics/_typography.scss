@@ -3,26 +3,20 @@
 @include font-face('Montserrat', montserrat-bold);
 
 h1,
-h2,
-h3 {
-	letter-spacing: initial;
-}
-
-h1,
 h2 {
     font-family: $stack-abolition;
 }
 
 h2 {
-    @include text(1.7rem, 1.1, normal, $white);
+    @include text(1.7rem, 1.1, bold, $color-text-light);
     margin: 0.5rem 0 .5rem;
 }
 
 h3 {
-    @include text(1.25rem, 1.2, $color: $color-prim);
-    margin-bottom: 1.7rem;
+    @include text(1.25rem, 1.2, $color: $color-text-dark);
+    margin: 1rem 0 1rem 0;
 }
 
 p {
-	@include text(1rem, 1.1, $color: $color-ter);
+	@include text(0.8rem, 1.1, $color: $color-text-light);
 }

@@ -110,14 +110,20 @@
 /* Sub Icons -------------------- */
 
 .sub-icon {
-	width: 5rem;
-	height: 5rem;
+	width: 3.5rem;
+	height: 3.5rem;
 }
 
 // Telescope
 
 #telescope-circle {
 	fill: $white;
+}
+
+// Twitter
+
+#bird {
+	fill: $color-sec;
 }
 
 

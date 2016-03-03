@@ -1,13 +1,13 @@
 button {
-	@include text(1.1rem, 1.1, normal, $white);
-	border: 0.175em solid $white;
+	@include text(1rem, 1.1, normal, $color-link-default);
+	border: 0.1em solid $color-border-light;
 	padding: 0.6em 1.2em;
 	background: transparent;
-	margin: 1rem 0;
+	margin: 0.7rem 0;
 
 	&:hover {
-		color: $color-sec;
-		border-color: $color-sec;
+		color: $color-link-hover;
+		border-color: $color-link-hover;
 	}
 }
 

@@ -933,13 +933,10 @@ _:-ms-fullscreen,
   margin-top: auto; }
 
 /* Base Styles -------------------- */
-* {
-  box-sizing: border-box; }
-
 html {
   font-size: 100%;
   line-height: 1.5;
-  color: #878787; }
+  color: #b5b5b5; }
 
 body {
   margin: 0;
@@ -963,30 +960,28 @@ li {
   border-bottom: 0.5rem solid rgba(0, 0, 0, 0.15); }
   .main-nav ul.grid {
     margin: 0;
-    padding: 0.5rem 0;
-    color: #fff; }
+    padding: 0.5rem 0; }
     .main-nav ul.grid li {
       margin-bottom: 0;
       text-align: center; }
-    .main-nav ul.grid li:first-child {
-      color: #594c5f;
+    .main-nav ul.grid li:first-child a {
+      color: #b5b5b5;
       font-weight: bold; }
-    .main-nav ul.grid li.active {
-      color: #b16369; }
 
 /* Pseudo-classes ------------------ */
 a:link {
-  color: #ffa949;
+  color: #fff;
   text-decoration: none; }
 
 a:visited {
-  color: #add8e6; }
+  color: #312933; }
 
 a:hover {
-  color: rgba(255, 169, 73, 0.5); }
+  color: #b16369; }
 
 /* Transitions ------------------ */
-button {
+button,
+.project {
   -webkit-transition: 0.15s ease-out;
   transition: 0.15s ease-out; }
 
@@ -997,18 +992,13 @@ button {
   src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype"); }
 
 h1,
-h2,
-h3 {
-  letter-spacing: initial; }
-
-h1,
 h2 {
   font-family: "Abolition Regular", Helvetica, Arial, sans-serif; }
 
 h2 {
   font-size: 1.7rem;
   line-height: 1.1;
-  font-weight: normal;
+  font-weight: bold;
   color: #fff;
   margin: 0.5rem 0 .5rem; }
 
@@ -1016,22 +1006,22 @@ h3 {
   font-size: 1.25rem;
   line-height: 1.2;
   color: #312933;
-  margin-bottom: 1.7rem; }
+  margin: 1rem 0 1rem 0; }
 
 p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.1;
-  color: #594c5f; }
+  color: #fff; }
 
 button {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.1;
   font-weight: normal;
   color: #fff;
-  border: 0.175em solid #fff;
+  border: 0.1em solid #fff;
   padding: 0.6em 1.2em;
   background: transparent;
-  margin: 1rem 0; }
+  margin: 0.7rem 0; }
   button:hover {
     color: #b16369;
     border-color: #b16369; }
@@ -1107,11 +1097,14 @@ button {
 
 /* Sub Icons -------------------- */
 .sub-icon {
-  width: 5rem;
-  height: 5rem; }
+  width: 3.5rem;
+  height: 3.5rem; }
 
 #telescope-circle {
   fill: #fff; }
+
+#bird {
+  fill: #b16369; }
 
 .header {
   background: #82737f;
@@ -1124,25 +1117,46 @@ button {
 .main-footer {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  border-bottom: 1em solid #ffa949; }
+  border-bottom: 1em solid #b16369; }
 
 main {
-  padding: 0 2rem; }
+  max-width: 80rem;
+  margin: 0 auto; }
+
+section.work,
+section.testimonials {
+  position: relative;
+  padding: 4rem 1.5rem; }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  main {
-    padding: 0 3rem; } }
+  section.work,
+  section.testimonials {
+    padding: 4rem 3rem; } }
 
 @media (min-width: 769px) and (max-width: 992px) {
-  main {
-    padding: 0 4rem; } }
+  section.work,
+  section.testimonials {
+    padding: 4rem 4.5rem; } }
+  @media (min-width: 993px) {
+    section.work,
+    section.testimonials {
+      padding: 4rem 6rem; } }
+  section.work:after,
+  section.testimonials:after {
+    content: '';
+    position: absolute;
+    background: #594c5f;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.25rem; }
 
-section.work {
-  padding: 4rem 0; }
+.testimonials {
+  background: #302b31; }
 
 .sub-header {
   display: block;
-  margin: 0 auto 1rem auto; }
+  margin: 0 auto; }
   .sub-header a:nth-of-type(1) button {
     margin-right: 1.5rem; }
 
@@ -1166,6 +1180,29 @@ section.work {
   border-top: 0.175em solid #fff;
   border-left: 0.175em solid #fff;
   border-right: 0.175em solid #fff;
-  background: #fff; }
+  background: #fff;
+  cursor: pointer; }
   .projects .project .project-bottom {
-    padding: 1rem; }
+    padding: 1rem;
+    position: relative; }
+    .projects .project .project-bottom p {
+      color: #b5b5b5; }
+  .projects .project:hover img {
+    opacity: 0.95; }
+  .projects .project:hover .project-bottom:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 102%;
+    background: #b16369;
+    height: 3%;
+    right: -1%; }
+  .projects .project:hover .project-bottom h3 {
+    color: #b16369; }
+
+.testimonials .grid {
+  max-width: 40rem;
+  margin: 0 auto; }
+  .testimonials .grid h2,
+  .testimonials .grid p {
+    text-align: center; }

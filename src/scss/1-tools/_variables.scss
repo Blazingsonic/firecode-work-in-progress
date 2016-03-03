@@ -9,6 +9,8 @@ $yellow-orange  : #ffa949;
 $sky-red		: #b16369;
 $dark-grey		: #312933;
 $smoke-grey		: #594c5f;
+$darkest-grey	: #302b31;
+$light-grey		: #b5b5b5;
 
 // Functional color variables
 
@@ -17,14 +19,15 @@ $color-sec          : $sky-red;
 $color-ter          : $smoke-grey;
 
 $color-text-light   : $white;
-$color-text-base    : $grey;
-$color-text-dark    : $river-bed;
+$color-text-base    : $light-grey;
+$color-text-dark    : $dark-grey;
 
-$color-border-light : lighten($grey, 35%);
-$color-border-dark  : $yellow-orange;
+$color-border-light : $white;
+$color-border-dark  : $sky-red;
 
-$color-link-default : $yellow-orange;
-$color-link-visited : $regent-st-blue;
+$color-link-default : $white;
+$color-link-visited : $dark-grey;
+$color-link-hover 	: $sky-red;
 
 $color-shadow       : rgba($black,.8);
 $color-body         : $white;
@@ -45,3 +48,11 @@ $br: 10px;
 
 $path-img  : '../img';
 $path-font : '../fonts';
+
+
+
+
+
+
+
+

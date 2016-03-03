@@ -22,27 +22,27 @@
 
 		<nav class="main-nav">
 			<ul class="grid">
-				<li class="grid__col-3 grid__col-md-6">LOGO</li>
-				<li class="grid__col-3 grid__col-md-2 active">Work</li>
-				<li class="grid__col-3 grid__col-md-2">About</li>
-				<li class="grid__col-3 grid__col-md-2">Contact</li>
+				<li class="grid__col-3"><a href="#">LOGO</a></li>
+				<li class="grid__col-3 active"><a href="#">Work</a></li>
+				<li class="grid__col-3"><a href="#">About</a></li>
+				<li class="grid__col-3"><a href="#">Contact</a></li>
 			</ul>
-		</nav>
-	</header>
+		</nav><!-- End nav -->
+	</header><!-- End header -->
 
 	<main>
 		<section class="work">
-			<div class="grid grid--justify-center sub-header">
+			<div class="grid grid--justify-center grid--bleed sub-header">
 				<svg class="sub-icon telescope">
 					<use xlink:href="#telescope"></use>
 				</svg>
-				<h2>Work</h2>
+				<h2 class="grid__col-12 grid--justify-center">Work</h2>
 				<a href="#"><button>Behance</button></a>
 				<a href="#"><button>Dribbble</button></a>
 			</div>
 			<section class="grid grid--justify-center projects">
 				<article class="grid__col-12 grid__col-sm-6 grid__col-md-4">
-					<div class="project">
+					<div class="project active">
 						<img src="img/bear.jpg" alt="">
 						<div class="project-bottom">
 							<h3>PROJECT</h3>
@@ -96,8 +96,18 @@
 					</div>
 				</article>
 			</section>
-		</section>
-	</main>
+		</section><!-- End work -->
+		
+		<section class="testimonials">
+			<div class="grid grid--direction-column grid--align-center grid--bleed">
+				<h2 class="grid__col-12">Testimonials</h2>
+				<p class="grid__col-12">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it?</p>
+				<svg class="grid__col-12 sub-icon twitter-testimonials">
+					<use xlink:href="#twitter"></use>
+				</svg>
+			</div>
+		</section><!-- End testimonials -->
+	</main><!-- End main -->
     
 	<!-- build:js js/app.min.js -->
 	<script src="js/jquery.js"></script>

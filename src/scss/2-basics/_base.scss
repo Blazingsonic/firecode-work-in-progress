@@ -1,9 +1,5 @@
 /* Base Styles -------------------- */
 
-* {
-	box-sizing: border-box;
-}
-
 html {
 	@include text(100%, 1.5, $color: $color-text-base);
 }
@@ -33,27 +29,22 @@ li {
 
 .main-nav {
 	background-color: $color-prim;
-	border-top: .1rem solid $color-sec;
+	border-top: .1rem solid $color-border-dark;
 	border-bottom: .5rem solid rgba(0,0,0,0.15);
 
 	ul.grid {
 	    margin: 0;
 	    padding: 0.5rem 0;
-	    color: $white;
 
 	    li {
 	        margin-bottom: 0;
 	        text-align: center;
 	    }
 
-	    li:first-child {
-	        color: $color-ter;
+	    li:first-child a {
+	        color: $color-text-base;
 	        font-weight: bold;
-	    }
-
-	    li.active {
-	        color: $color-sec;
-	    }
+	   }
 	}
 }
 
@@ -68,7 +59,7 @@ a {
 	    color: $color-link-visited;
 	}
 	&:hover {
-	    color: rgba($color-link-default, .5);
+	    color: $color-link-hover;
 	}
 }
 
@@ -76,7 +67,8 @@ a {
 
 // General
 
-button {
+button,
+.project {
 	transition: 0.15s ease-out;
 }
 
