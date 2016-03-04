@@ -1061,9 +1061,47 @@ h3 {
   margin: 1rem 0 1rem 0; }
 
 p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 1.1;
   color: #fff; }
+
+h2.underline, h2.red-underline {
+  position: relative;
+  margin: 0.5rem 0 2rem; }
+
+h2.underline:after {
+  content: '';
+  position: absolute;
+  width: 6rem;
+  height: 0.2rem;
+  top: 142%;
+  left: 50%;
+  background: url("../img/svg/underline.svg");
+  background-repeat: no-repeat;
+  margin-left: -3rem; }
+
+h2.red-underline:after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 0.2rem;
+  top: 142%;
+  left: 50%;
+  background: #b16369;
+  margin-left: -1rem;
+  border-radius: 0.2rem; }
+
+p.quote,
+p.name {
+  font-size: 1.1rem;
+  line-height: 1.1;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 1rem; }
+
+p.quote {
+  text-align: right;
+  padding-right: 3rem; }
 
 button {
   font-size: 1rem;
@@ -1081,9 +1119,16 @@ button {
 .selection-buttons {
   margin-bottom: 0.7rem; }
 
-.arrow {
-  width: 5rem;
-  margin-top: 15rem; }
+.slider-circle {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: transparent;
+  border-radius: 50%;
+  border: 0.2rem solid #fff;
+  margin: 0 0.4rem 2.5rem; }
+  .slider-circle.active {
+    background-color: #b16369;
+    border-color: #b16369; }
 
 .hide-svg-defs {
   width: 0;
@@ -1169,8 +1214,33 @@ button {
 #telescope-circle {
   fill: #fff; }
 
+.twitter-testimonials {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 2.5rem 0 1.5rem; }
+
 #bird {
   fill: #b16369; }
+
+#astronaut-circle {
+  fill: #b16369; }
+
+#helmet,
+#scarf {
+  fill: #fff; }
+
+.profile-img {
+  width: 14rem;
+  height: 14rem;
+  margin: 2.5rem 0 2.5rem;
+  border: 0.4rem solid #594c5f;
+  border-radius: 50%; }
+
+#profile-circle {
+  fill: #3e3e3e; }
+
+#silhouette {
+  fill: #615f60; }
 
 .header {
   background: #82737f;
@@ -1190,11 +1260,13 @@ main {
   margin: 0 auto; }
 
 section.work,
-section.testimonials {
+section.testimonials,
+section.profile {
   position: relative;
   padding: 4rem 0; }
   section.work:after,
-  section.testimonials:after {
+  section.testimonials:after,
+  section.profile:after {
     content: '';
     position: absolute;
     background: #594c5f;
@@ -1203,11 +1275,8 @@ section.testimonials {
     width: 100%;
     height: 0.25rem; }
 
-.sub-header {
-  display: block;
-  margin: 0 auto; }
-  .sub-header a:nth-of-type(1) button {
-    margin-right: 1.5rem; }
+.sub-header a:nth-of-type(1) button {
+  margin-right: 1.5rem; }
 
 .projects {
   padding: 0 2rem; }
@@ -1264,10 +1333,3 @@ section.testimonials {
     height: 2%; }
   .project:hover .project-bottom h3 {
     color: #b16369; }
-
-.testimonials .grid {
-  max-width: 40rem;
-  margin: 0 auto; }
-  .testimonials .grid h2,
-  .testimonials .grid p {
-    text-align: center; }

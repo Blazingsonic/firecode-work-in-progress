@@ -1,4 +1,4 @@
-// Descriptive color variables
+// Descriptive Color Variables
 
 $white          : #fff;
 $black          : #000;
@@ -12,7 +12,7 @@ $smoke-grey		: #594c5f;
 $darkest-grey	: #302b31;
 $light-grey		: #b5b5b5;
 
-// Functional color variables
+// Functional Color Variables
 
 $color-prim         : $dark-grey;
 $color-sec          : $sky-red;
@@ -32,7 +32,7 @@ $color-link-hover 	: $sky-red;
 $color-shadow       : rgba($black,.8);
 $color-body         : $white;
 
-// Font stacks
+// Font Stacks
 
 $stack-sans-serif : Helvetica, Arial, sans-serif;
 $stack-serif : serif;
@@ -40,11 +40,11 @@ $stack-helvetica  : 'Helvetica Neue', $stack-sans-serif;
 $stack-abolition  : 'Abolition Regular', $stack-sans-serif;
 $stack-montserrat  : 'Montserrat', $stack-sans-serif;
 
-// Border radius
+// Border Radius
 
 $br: 10px;
 
-// Asset paths
+// Asset Paths
 
 $path-img  : '../img';
 $path-font : '../fonts';

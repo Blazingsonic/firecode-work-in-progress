@@ -4,7 +4,8 @@ main {
 }
 
 section.work,
-section.testimonials {
+section.testimonials,
+section.profile {
 	position: relative;
 	padding: 4rem 0;
 
@@ -22,8 +23,6 @@ section.testimonials {
 // Work
 
 .sub-header {
-	display: block;
-	margin: 0 auto;
 
 	a:nth-of-type(1) {
 		

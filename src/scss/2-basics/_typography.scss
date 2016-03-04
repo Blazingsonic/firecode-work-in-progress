@@ -18,5 +18,61 @@ h3 {
 }
 
 p {
-	@include text(0.8rem, 1.1, $color: $color-text-light);
+	@include text(0.9rem, 1.1, $color: $color-text-light);
 }
+
+// Underline Styles
+
+h2 {
+	
+	&.underline,
+	&.red-underline {
+		position: relative;
+		margin: 0.5rem 0 2rem;
+	}
+	
+	&.underline:after {
+		content: '';
+	    position: absolute;
+	    width: 6rem;
+	    height: 0.2rem;
+	    top: 142%;
+	    left: 50%;
+	    background: url("../img/svg/underline.svg");
+	    background-repeat: no-repeat;
+	    margin-left: -3rem;
+	}
+
+	&.red-underline:after {
+		content: '';
+		position: absolute;
+		width: 2rem;
+		height: 0.2rem;
+		top: 142%;
+		left: 50%;
+		background: $color-sec;
+		margin-left: -1rem;
+		border-radius: 0.2rem;
+	}
+}
+
+// Quote
+
+p.quote,
+p.name {
+	@include text(1.1rem, 1.1, bold, $color-text-light);
+	margin: 0 0 1rem;
+}
+
+p.quote {
+	text-align: right;
+	padding-right: 3rem;
+}
+
+
+
+
+
+
+
+
