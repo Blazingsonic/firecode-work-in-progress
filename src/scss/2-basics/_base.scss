@@ -1,22 +1,26 @@
 /* Base Styles -------------------- */
 
-html {
-	@include text(100%, 1.5, $color: $color-text-base);
-	-webkit-box-sizing: border-box;
-  	-moz-box-sizing: border-box;
-  	box-sizing: border-box;
-}
-
 *, *:before, *:after {
   	-webkit-box-sizing: inherit;
   	-moz-box-sizing: inherit;
 	box-sizing: inherit;
 }
 
-body {
-	margin: 0;
-	font-family: $stack-montserrat;
+html {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: $base-line-height;
+	color: $color-text-light;
+}
+
+body {	
 	background: #312933;
+	position: relative;
+}
+
+ul, ol, dd, figure, pre, table, fieldset, hr, button {
+	margin-top: 0;
+	margin-bottom: $base-line-height;
 }
 
 img {
@@ -25,36 +29,56 @@ img {
 	//border-radius: $br;
 }
 
-ul,
-ol {
-	margin: 1rem 0;
+li {
+	list-style-type: none;
 }
 
-li {
-	margin-bottom: 2rem;
-	list-style-type: none;
+/* Gridlover Grid ------------------ */
+.gridlover-grid {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	opacity: 0.75;
+	background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+    background-position: left -1px;
+    background-repeat: repeat;
+    background-size: $base-line-height $base-line-height;
+}
+
+.show-grid-button {
+	@include type-setting(2);
+	position: fixed;
+	right: 0;
+	width: $base-line-height * 3;
+	height: $base-line-height * 2;
+	background-color: $white;
+	z-index: 2;
+	color: hsla(200, 100%, 50%, .3);
+	text-align: center;
+	cursor: pointer;
+	padding: 0.25em 0.5em;
 }
 
 /* Navigation ------------------ */
 
 .main-nav {
 	background-color: $color-prim;
-	border-top: .25rem solid $color-sec;
-	border-bottom: .5rem solid darken($color-border-dark, 5%);
+	border-top: 0.25rem solid $color-sec;
+	border-bottom: 0.5rem solid darken($color-border-dark, 5%);
 
 	ul.row {
 	    margin: 0;
-	    padding: 0.5rem 0;
+	    padding: 0;
 
 	    li {
+	    	@include type-setting(0);
 	        margin-bottom: 0;
-	        padding: 0.4rem 0;
+	        padding: $base-line-height / 2 0;
 	    }
-
-	    li:first-child a {
-	        color: $color-text-base;
-	        font-weight: bold;
-	   }
 	}
 }
 
@@ -81,8 +105,6 @@ button,
 .project {
 	transition: 0.15s ease-out;
 }
-
-
 
 
 

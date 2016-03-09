@@ -1,3 +1,81 @@
+// ==========================================================================
+// Vertical Rythm
+// ==========================================================================
+
+// $container-width: 750px;
+// $container-height: 440px;
+
+$base-font-size: 1rem;
+$base-line-height: 1.5 * $base-font-size;
+
+// Perfect Fourth
+
+$type-settings: (
+	-5: (
+    	font-size: 0.238rem,
+    	line-height: $base-line-height / 5
+  	),
+	-4: (
+    	font-size: 0.317rem,
+    	line-height: $base-line-height / 4
+  	),
+	-3: (
+    	font-size: 0.422rem,
+    	line-height: $base-line-height / 3
+  	),
+  	-2: (
+    	font-size: 0.563rem,
+    	line-height: $base-line-height / 2
+  	),
+  	-1: (
+    	font-size: 0.75rem,
+    	line-height: $base-line-height
+  	),
+  	0: (
+    	font-size: 1rem,
+    	line-height: $base-line-height
+  	),
+  	1: (
+    	font-size: 1.333rem,
+    	line-height: $base-line-height
+  	),
+  	2: (
+    	font-size: 1.777rem,
+    	line-height: $base-line-height * 2
+  	),
+  	3: (
+    	font-size: 2.369rem,
+    	line-height: $base-line-height * 2
+  	),
+  	4: (
+    	font-size: 3.157rem,
+    	line-height: $base-line-height * 3
+  	),
+  	5: (
+    	font-size: 4.209rem,
+    	line-height: $base-line-height * 3
+  	)
+);
+
+@function type-scale($level) {
+	@return map-get(
+    	map-get($type-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+	@return map-get(
+    	map-get($type-settings, $level), 'line-height');
+}
+
+@mixin type-setting($level) {
+	font-size: type-scale($level);
+	line-height: line-height($level);
+}
+
+// ==========================================================================
+// General Mixins
+// ==========================================================================
+
 // Web Fonts
 
 @mixin font-face($family, $file) {
@@ -8,15 +86,6 @@
 			url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
 			url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
 	}
-}
-
-// Text
-
-@mixin text($size, $l-height: null, $weight: null, $color: null) {
-	font-size: $size;
-	line-height: $l-height;
-	font-weight: $weight;
-	color: $color;
 }
 
 // Background Gradient
@@ -43,7 +112,6 @@
 
 // Work Card
 @mixin work-card {
-	@include text(1.1rem, 1.1, normal, $white);
 	background: $white;
 }
 

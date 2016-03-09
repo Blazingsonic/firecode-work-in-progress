@@ -1,0 +1,29 @@
+.profile-background {
+	background: url($path-img + '/svg/profile-planet.svg');
+	background-repeat: no-repeat;
+	background-position: -15% 65%;
+	background-size: 120%;
+}
+
+.profile-overview {
+	margin-bottom: $base-line-height * 14;
+
+	.info-hints {
+		margin-bottom: $base-line-height / 2;
+	}
+}
+
+.skills {
+	@include type-setting(3);
+	width: $base-line-height * 3;
+	height: $base-line-height * 3;
+	margin-right: $base-line-height / 2;
+	background-color: $color-sec;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:first-child {
+		margin-left: $base-line-height;
+	}
+}

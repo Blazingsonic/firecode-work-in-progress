@@ -1,34 +1,47 @@
-/* Web Fonts -------------------- */
+/* General Font Styles -------------------- */
 
 @include font-face('Montserrat', montserrat-bold);
 
-h1,
-h2 {
-    font-family: $stack-abolition;
+// Magic Number Setup
+
+h1,h2,h3,h4,h5,h6,hgroup, p {
+	margin-top: 0;
+	margin-bottom: $base-line-height;
+}
+
+h1 {
+	@include type-setting(3);
+	font-weight: bold;
+	color: $color-text-light;
 }
 
 h2 {
-    @include text(1.7rem, 1.1, bold, $color-text-light);
-    margin: 0.5rem 0 .5rem;
+	font-size: 1.777rem;
+	line-height: $base-line-height;
+	margin-bottom: 1rem;
 }
 
 h3 {
-    @include text(1.25rem, 1.2, $color: $color-text-dark);
-    margin: 1rem 0 1rem 0;
+	@include type-setting(1);
+	font-weight: bold;
+	color: $color-text-light;
 }
 
 p {
-	@include text(0.9rem, 1.1, $color: $color-text-light);
+	@include type-setting(0);
+	font-weight: bold;
+	color: $color-text-light;
 }
 
-// Underline Styles
+/* Specific Font Styles -------------------- */
+
+// Underline
 
 h2 {
 	
 	&.underline,
 	&.red-underline {
 		position: relative;
-		margin: 0.5rem 0 2rem;
 	}
 	
 	&.underline:after {
@@ -36,9 +49,9 @@ h2 {
 	    position: absolute;
 	    width: 6rem;
 	    height: 0.2rem;
-	    top: 142%;
+	    top: 150%;
 	    left: 50%;
-	    background: url("../img/svg/underline.svg");
+	    background: url($path-img + '/svg/underline.svg');
 	    background-repeat: no-repeat;
 	    margin-left: -3rem;
 	}
@@ -48,7 +61,7 @@ h2 {
 		position: absolute;
 		width: 2rem;
 		height: 0.2rem;
-		top: 142%;
+		top: 150%;
 		left: 50%;
 		background: $color-sec;
 		margin-left: -1rem;
@@ -60,13 +73,20 @@ h2 {
 
 p.quote,
 p.name {
-	@include text(1.1rem, 1.1, bold, $color-text-light);
-	margin: 0 0 1rem;
+	@include type-setting(1);
+	font-weight: bold;
+	margin: 0 0 $base-line-height;
 }
 
 p.quote {
 	text-align: right;
-	padding-right: 3rem;
+	padding-right: $base-line-height * 3;
+}
+
+// Secondary
+
+p.secondary {
+	@include type-setting(-1);
 }
 
 

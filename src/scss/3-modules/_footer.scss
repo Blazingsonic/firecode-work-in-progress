@@ -1,6 +1,6 @@
-.main-footer {
-	@extend %centered;
-	padding-top: 6rem;
-	padding-bottom: 6rem;
-	border-bottom: 1em solid $color-border-dark;
+.footer-background {
+	background: url($path-img + '/svg/footer-planet.svg');
+	background-repeat: no-repeat;
+	background-position: 90% 50%;
+	background-size: 90%;
 }

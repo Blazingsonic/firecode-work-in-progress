@@ -3,42 +3,39 @@
 $white          : #fff;
 $black          : #000;
 $grey           : #878787;
-$regent-st-blue : #add8e6;
-$river-bed      : #48525c;
-$yellow-orange  : #ffa949;
-$sky-red		: #b16369;
-$dark-grey		: #312933;
-$smoke-grey		: #594c5f;
-$darkest-grey	: #302b31;
-$light-grey		: #b5b5b5;
+$grey-light		: #b5b5b5;
+$grey-smoke		: #594c5f;
+$grey-dark		: #312933;
+$grey-darkest	: #302b31;
+$red-sky		: #da5463;
 
 // Functional Color Variables
 
-$color-prim         : $dark-grey;
-$color-sec          : $sky-red;
-$color-ter          : $smoke-grey;
+$color-prim         : $grey-dark;
+$color-sec          : $red-sky;
+$color-ter          : $grey-smoke;
 
 $color-text-light   : $white;
-$color-text-base    : $light-grey;
-$color-text-dark    : $dark-grey;
+$color-text-base    : $grey-light;
+$color-text-dark    : $grey-dark;
 
 $color-border-light : $white;
-$color-border-dark  : $dark-grey;
+$color-border-dark  : $grey-dark;
 
 $color-link-default : $white;
-$color-link-visited : $dark-grey;
-$color-link-hover 	: $sky-red;
+$color-link-visited : $grey-light;
+$color-link-hover 	: $red-sky;
 
-$color-shadow       : rgba($black,.8);
+$color-shadow       : rgba($black, 0.8);
 $color-body         : $white;
 
 // Font Stacks
 
-$stack-sans-serif : Helvetica, Arial, sans-serif;
-$stack-serif : serif;
-$stack-helvetica  : 'Helvetica Neue', $stack-sans-serif;
-$stack-abolition  : 'Abolition Regular', $stack-sans-serif;
-$stack-montserrat  : 'Montserrat', $stack-sans-serif;
+// $stack-sans-serif 	: Helvetica, Arial, sans-serif;
+// $stack-serif 		: serif;
+// $stack-helvetica  	: 'Helvetica Neue', $stack-sans-serif;
+// $stack-abolition  	: 'Abolition Regular', $stack-sans-serif;
+// $stack-montserrat  	: 'Montserrat', $stack-sans-serif;
 
 // Border Radius
 
@@ -49,10 +46,22 @@ $br: 10px;
 $path-img  : '../img';
 $path-font : '../fonts';
 
+// Magic Number
+// 1rem * 1.5 = 1.5rem
 
+$mn 		: 1.618rem;
 
+// Modular Scale
 
+$ms-base	: 1rem;
+$ms-1		: 1.618rem;
+$ms-2		: 2.816rem;
+$ms-3		: 4.236rem;
+$ms-4		: 6.854rem;
 
+$ms-01		: 0.618rem;
+$ms-02		: 0.382rem;
+$ms-03		: 0.236rem;
 
 
 
