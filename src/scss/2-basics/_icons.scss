@@ -132,6 +132,16 @@
 	fill: $white;
 }
 
+// Signal
+
+#signal-circle {
+	fill: $color-sec;
+}
+
+#wave-1, #wave-2, #wave-3, #signal-inner-circle {
+	fill: $white;
+}
+
 /* Small Icons -------------------- */
 
 .small-icon {

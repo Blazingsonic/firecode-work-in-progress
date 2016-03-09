@@ -20,7 +20,7 @@ $('.main-heading').on('sticky-end', function () {
 
 console.log('This was a live reload!');
 
-$.get("img/svg/svg.svg", function(data) {
+$.get("img/sprite/svg.svg", function(data) {
   	var div = document.createElement('div');
   	div.className += 'hide-svg-defs';
   	div.innerHTML = new XMLSerializer().serializeToString(data.documentElement);

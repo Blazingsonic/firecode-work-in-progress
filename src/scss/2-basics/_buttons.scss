@@ -12,6 +12,12 @@ button {
 	}
 }
 
+button[type="submit"] {
+	@include type-setting(1);
+	letter-spacing: 0.25rem;
+	padding: $base-line-height / 4 $base-line-height;
+}
+
 // Selection Buttons
 
 .work .selection-buttons {

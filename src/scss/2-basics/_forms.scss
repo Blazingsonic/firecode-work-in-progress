@@ -1,0 +1,38 @@
+::-webkit-input-placeholder {
+   color: $color-text-light;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $color-text-light;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $color-text-light;
+}
+
+:-ms-input-placeholder {  
+   color: $color-text-light; 
+}
+
+.form-wrap {
+	margin-top: $base-line-height * 2;
+}
+
+form {
+
+}
+
+input, textarea {
+	background-color: #af404c;
+	border: none;
+	padding: 1.5rem;
+	width: 100%;
+}
+
+input {
+	height: $base-line-height;
+}
+
+textarea {
+	padding: 0.75rem;
+}

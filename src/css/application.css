@@ -241,8 +241,8 @@ th {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem; }
+  padding-right: 0.75rem;
+  padding-left: 0.75rem; }
 
 .col-xs {
   -webkit-box-flex: 1;
@@ -455,8 +455,8 @@ th {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
+    padding-right: 0.75rem;
+    padding-left: 0.75rem; }
   .col-sm {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -635,8 +635,8 @@ th {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
+    padding-right: 0.75rem;
+    padding-left: 0.75rem; }
   .col-md {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -815,8 +815,8 @@ th {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
+    padding-right: 0.75rem;
+    padding-left: 0.75rem; }
   .col-lg {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
@@ -978,7 +978,7 @@ body {
   background: #312933;
   position: relative; }
 
-ul, ol, dd, figure, pre, table, fieldset, hr, button {
+ul, ol, dd, figure, pre, table, fieldset, hr, button, input, textarea {
   margin-top: 0;
   margin-bottom: 1.5rem; }
 
@@ -1135,6 +1135,12 @@ button {
     color: #da5463;
     border-color: #da5463; }
 
+button[type="submit"] {
+  font-size: 1.333rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.25rem;
+  padding: 0.375rem 1.5rem; }
+
 .work .selection-buttons button:nth-of-type(1) {
   margin-right: 0.65rem; }
 
@@ -1231,6 +1237,12 @@ button {
 #scarf {
   fill: #fff; }
 
+#signal-circle {
+  fill: #da5463; }
+
+#wave-1, #wave-2, #wave-3, #signal-inner-circle {
+  fill: #fff; }
+
 /* Small Icons -------------------- */
 .small-icon {
   width: 1.5rem;
@@ -1259,6 +1271,35 @@ button {
 #silhouette {
   fill: #615f60; }
 
+::-webkit-input-placeholder {
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff; }
+
+:-ms-input-placeholder {
+  color: #fff; }
+
+.form-wrap {
+  margin-top: 3rem; }
+
+input, textarea {
+  background-color: #af404c;
+  border: none;
+  padding: 1.5rem;
+  width: 100%; }
+
+input {
+  height: 1.5rem; }
+
+textarea {
+  padding: 0.75rem; }
+
 .header {
   background: #82737f;
   background: -webkit-linear-gradient(#82737f 0%, #a66976 100%);
@@ -1266,12 +1307,6 @@ button {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82737f', endColorstr='#a66976', GradientType=0 );
   width: 100%;
   padding-top: 1rem; }
-
-.footer-background {
-  background: url("../img/svg/footer-planet.svg");
-  background-repeat: no-repeat;
-  background-position: 90% 50%;
-  background-size: 90%; }
 
 .container {
   position: relative;
@@ -1306,6 +1341,9 @@ button {
 
 .module.testimonials {
   max-width: 41.956rem; }
+
+.module.contact {
+  padding-top: 27rem; }
 
 .tips {
   float: left; }
@@ -1383,3 +1421,14 @@ button {
     margin-right: 1.5rem; }
     .service-items .service-item:last-child {
       margin: 0; }
+
+.contact-background {
+  background: url("../img/svg/footer-planet.svg");
+  background-repeat: no-repeat;
+  background-position: 45% 4.5rem;
+  background-size: 115%; }
+
+.contact p.secondary {
+  margin-bottom: 0; }
+  .contact p.secondary:first-of-type {
+    margin-top: 1.5rem; }

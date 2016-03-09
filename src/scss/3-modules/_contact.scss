@@ -1,0 +1,17 @@
+.contact-background {
+	background: url($path-img + '/svg/footer-planet.svg');
+	background-repeat: no-repeat;
+	background-position: 45% 4.5rem;
+	background-size: 115%;
+}
+
+.contact {
+
+	p.secondary {
+		margin-bottom: 0;
+		
+		&:first-of-type {
+			margin-top: 1.5rem;
+		}
+	}
+}

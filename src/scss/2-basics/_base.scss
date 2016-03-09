@@ -18,7 +18,9 @@ body {
 	position: relative;
 }
 
-ul, ol, dd, figure, pre, table, fieldset, hr, button {
+// Vertical Rythm Setup
+
+ul, ol, dd, figure, pre, table, fieldset, hr, button, input, textarea {
 	margin-top: 0;
 	margin-bottom: $base-line-height;
 }

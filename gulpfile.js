@@ -43,7 +43,7 @@ gulp.task('svgstore', function () {
             }]
         }))
         .pipe(svgstore())
-        .pipe(gulp.dest(options.src + '/img/svg'));
+        .pipe(gulp.dest(options.src + '/img/sprite'));
 });
 
 gulp.task('watchFiles', function() {
