@@ -70,7 +70,7 @@ li {
 .main-nav {
 	background-color: $color-prim;
 	border-top: 0.25rem solid $color-sec;
-	border-bottom: 0.5rem solid darken($color-border-dark, 5%);
+	border-bottom: 0.5rem solid rgba(0, 0, 0, 0.15);
 
 	ul.row {
 	    margin: 0;
@@ -97,6 +97,20 @@ a {
 	&:hover {
 	    color: $color-link-hover;
 	}
+}
+
+/* Helper Classes ------------------ */
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
 }
 
 /* Transitions ------------------ */

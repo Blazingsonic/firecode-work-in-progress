@@ -1,13 +1,17 @@
 .service-items {
 	margin-top: 3.5rem;
 
-	.service-item {
-		width: $base-line-height * 3;
-		height: $base-line-height * 3;
-		margin-right: $base-line-height;
+	div {
+		margin-right: $base-line-height * 3;
 
 		&:last-child {
-			margin: 0;
-		}
+				margin: 0;
+		}	
 	}
+}
+
+.service-item {
+	width: $base-line-height * 3;
+	height: $base-line-height * 3;
+	margin-bottom: 1rem;
 }

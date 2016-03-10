@@ -16,6 +16,11 @@ button[type="submit"] {
 	@include type-setting(1);
 	letter-spacing: 0.25rem;
 	padding: $base-line-height / 4 $base-line-height;
+
+	&:hover {
+		color: #af404c;
+		border-color: #af404c;
+	}
 }
 
 // Selection Buttons
@@ -23,7 +28,7 @@ button[type="submit"] {
 .work .selection-buttons {
 		
 	button:nth-of-type(1) {
-		margin-right: 0.65rem;
+		margin-right: 1rem;
 	}
 }
 

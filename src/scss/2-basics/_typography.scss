@@ -89,6 +89,12 @@ p.secondary {
 	@include type-setting(-1);
 }
 
+// Tertiary
+
+p.tertiary {
+	@include type-setting(0);
+	color: $color-ter;
+}
 
 
 

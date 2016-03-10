@@ -37,6 +37,12 @@
 	}
 }
 
+// Text
+
+#hero-text {
+	fill: $white;
+}
+
 // Smoke
 
 #smoke-outer {
@@ -44,7 +50,7 @@
 }
 
 #smoke-inner {
-	fill: $color-ter;
+	//fill: $color-ter;
 }
 
 // Clouds
@@ -62,7 +68,7 @@
 // Rocket
 
 #rocket-body {
-	fill: #3e3543;
+	//fill: #3e3543;
 }
 
 #inner-flame {
@@ -81,13 +87,13 @@
 
 #mountains-left,
 #mountains-right {
-	fill: $color-prim;
+	//fill: $color-prim;
 }
 
 #mountain-top-left,
 #mountain-top-middle,
 #mountain-top-right {
-	fill: #e98a96;
+	//fill: #e98a96;
 }
 
 // Blast
@@ -135,7 +141,7 @@
 // Signal
 
 #signal-circle {
-	fill: $color-sec;
+	fill: #af404c;
 }
 
 #wave-1, #wave-2, #wave-3, #signal-inner-circle {
@@ -148,6 +154,27 @@
 	width: $base-line-height;
 	height: $base-line-height;
 	margin-right: $base-line-height / 2;
+}
+
+/* Tiny Icons -------------------- */
+
+.tiny-icon {
+	border-radius: 50%;
+	width: 1.75rem;
+	height: 1.75rem;
+	background-color: $grey-light;
+	padding: 0.2rem;
+	margin-right: 0.75rem;
+
+	&:last-child {
+		marign-right: 0;
+	}
+}
+
+// Twitter Footer
+
+#bird-footer {
+	fill: $color-prim;
 }
 
 /* Other Icons -------------------- */

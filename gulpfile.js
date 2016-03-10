@@ -49,6 +49,7 @@ gulp.task('svgstore', function () {
 gulp.task('watchFiles', function() {
 	livereload.listen();
 	gulp.watch(options.src + '/scss/**/*.scss', ['compileSass']);
+	gulp.watch(options.src + '/img/svg/*.svg', ['svgstore']);
 	//gulp.watch(options.src + 'js/main.js', ['concatScripts']);
 });
 
